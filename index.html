@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Little Home</title>
+<style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; color:#333;}
+    header {background:#4a90e2; color:white; text-align:center; padding:30px 10px;}
+    header h1 {margin:0;}
+    .content {padding:20px; max-width:900px; margin:auto;}
+    .section {margin-bottom:40px;}
+    .gallery {display:flex; flex-wrap:wrap; gap:10px; justify-content:center;}
+    .gallery img {width:200px; height:150px; object-fit:cover; border-radius:8px;}
+    footer {background:#333; color:white; text-align:center; padding:20px 10px;}
+    .phone a {color:white; text-decoration:none; font-weight:bold;}
+    .lang-tabs {display:flex; justify-content:center; margin-bottom:20px; gap:10px;}
+    .lang-tabs button {padding:10px 20px; cursor:pointer; border:none; border-radius:5px;}
+    .lang-tabs button.active {background:#4a90e2; color:white;}
+    .lang {display:none;}
+    .lang.active {display:block;}
+    ul {line-height:1.6;}
+</style>
+</head>
+<body>
+<header>
+<h1>The Little Home</h1>
+<p class="phone">Phone/WhatsApp: <a href="tel:+38269896191">+382 69 896 191</a></p>
+</header>
+<div class="content">
+<div class="lang-tabs">
+<button onclick="showLang('en', event)" class="active">English</button>
+<button onclick="showLang('me', event)">Montenegrin</button>
+<button onclick="showLang('ru', event)">Русский</button>
+</div>
+
+<!-- English -->
+<div id="en" class="lang active">
+<div class="section">
+<h2>Welcome</h2>
+<p>Unique fisherman's house on the very shore of the Adriatic Sea — Utjeha, Montenegro.</p>
+</div>
+<div class="section">
+<h2>About the House</h2>
+<p>This is not just a house by the sea. It is a rare opportunity to stay in a real fisherman's house, as Utjeha looked decades ago. Few such buildings remain on the coast — we lovingly preserved its historical foundation and carefully restored it so you can feel the authentic coastal life.</p>
+<p>Old stone, the shade of a vineyard, the sound of waves, the smell of salt and sun — time seems to slow down here. Yet you don’t sacrifice comfort: inside is modern equipment and everything you need for a relaxed stay.</p>
+<ul>
+<li>✨ 40 m² of coziness on two levels</li>
+<li>Bedroom with large bed, wardrobe and lounge area</li>
+<li>Living room-studio with sofa bed</li>
+<li>Full kitchen with dishwasher, induction hob, microwave, kettle and fridge</li>
+<li>Washing machine, hair dryer, iron</li>
+<li>Two air conditioners for your comfort</li>
+</ul>
+</div>
+</div>
+
+<!-- Montenegrin -->
+<div id="me" class="lang">
+<div class="section">
+<h2>Dobrodošli</h2>
+<p>Jedinstvena ribarska kuća na samoj obali Jadranskog mora — Utjeha, Crna Gora.</p>
+</div>
+<div class="section">
+<h2>O kući</h2>
+<p>Ovo nije samo kuća na moru. Ovo je rijetka prilika da boravite u pravoj ribarskoj kući, kakva je Utjeha bila prije mnogo decenija. Malo je takvih građevina ostalo na obali — sa ljubavlju smo sačuvali njenu istorijsku osnovu i pažljivo obnovili, da biste mogli osjetiti autentičnu obalsku atmosferu.</p>
+<p>Stari kamen, hlad vinove loze, zvuk talasa, miris soli i sunca — ovdje vrijeme kao da usporava. A ipak, ne žrtvujete udobnost: unutra je moderno opremljeno sve što vam je potrebno za opušten odmor.</p>
+<ul>
+<li>✨ 40 m² udobnosti na dva nivoa</li>
+<li>Spavaća soba sa velikim krevetom, garderoberom i prostorom za odmor</li>
+<li>Dnevna soba-studio sa sofom na razvlačenje</li>
+<li>Potpuna kuhinja sa mašinom za sudove, indukcionom pločom, mikrotalasnom, kuvalom i frižiderom</li>
+<li>Mašina za veš, fen, pegla</li>
+<li>Dva klima uređaja za vašu udobnost</li>
+</ul>
+</div>
+</div>
+
+<!-- Russian -->
+<div id="ru" class="lang">
+<div class="section">
+<h2>Добро пожаловать</h2>
+<p>Уникальный рыбацкий домик на самом берегу Адриатического моря — Утеха, Черногория.</p>
+</div>
+<div class="section">
+<h2>О доме</h2>
+<p>Это не просто дом у моря. Это — редкая возможность остановиться в настоящем рыбацком домике, каким был Утеха много десятилетий назад. Подобных построек почти не осталось на побережье — мы с любовью сохранили его историческую основу и бережно восстановили, чтобы вы могли почувствовать подлинную атмосферу прибрежной жизни.</p>
+<p>Старый камень, тень виноградника, шум волн, запах соли и солнца — здесь время будто замедляется. При этом вы не жертвуете комфортом: внутри — современное оснащение и всё, что нужно для расслабленного отдыха.</p>
+<ul>
+<li>✨ 40 м² уюта на два уровня</li>
+<li>Спальня с большой кроватью, гардеробной и зоной отдыха</li>
+<li>Гостиная-студия с раскладным диваном</li>
+<li>Полноценная кухня с посудомоечной машиной, индукционной плитой, микроволновкой, чайником и холодильником</li>
+<li>Стиральная машина, фен, утюг</li>
+<li>Два кондиционера для вашего комфорта</li>
+</ul>
+</div>
+</div>
+</div>
+
+<footer>
+<p>&copy; 2025 The Little Home</p>
+</footer>
+
+<script>
+function showLang(lang, event) {
+  document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.lang-tabs button').forEach(el => el.classList.remove('active'));
+  document.getElementById(lang).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
